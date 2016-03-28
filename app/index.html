@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+<html ng-app="app" ng-controller="monolithicCtrl">
+<head>
+    <title>{{ vm.pageTitle }}</title>
+    <meta charset="utf-8" />
+    <link href="../../lib/skeleton/css/normalize.css" rel="stylesheet" />
+    <link href="../../lib/skeleton/css/skeleton.css" rel="stylesheet" />
+
+    <script src="../../lib/moment/min/moment.min.js"></script>
+    <script src="../../lib/moment/min/moment-with-locales.min.js"></script>
+    <script src="../../lib/jquery/dist/jquery.min.js"></script>
+    <script src="../../lib/angular/angular.min.js"></script>
+    <script src="../../lib/bootstrap/js/dropdown.js"></script>
+    <script src="../../lib/angular-bootstrap-datetimepicker/src/js/datetimepicker.js"></script>
+    <script src="../../lib/angular-bootstrap-datetimepicker/src/js/datetimepicker.templates.js"></script>
+    <script src="../../assets/js/all.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>{{ vm.pageTitle }}</h1>
+        <div class="row">
+            <div class="twelve column">
+                <h2>{{ vm.selectedDate | momentformat:'LLL' }}</h2>
+                <datetimepicker data-ng-model="vm.selectedDate"></datetimepicker>
+            </div>
+        </div>
+        <div class="row">
+            <a class="button button-primary" href="" ng-click="vm.startCountdown()">Start Countdown</a>
+        </div>
+    </div>
+</body>
+</html>
