@@ -9,19 +9,9 @@
         timespan?: ITimespan;
     }
 
-    export interface IDateDifference {
-        yearDiff: number;
-        monthDiff: number;
-        dayDiff: number;
-        hourDiff: number;
-        minuteDiff: number;
-        secondDiff: number;
-    }
-
     export class MonolithicController {
         constructor(
             protected $scope: IMonolithicScope,
-            protected $cacheFactory: ng.ICacheFactoryService,
             protected $interval: ng.IIntervalService) {
 
             $scope.vm = $scope.vm || {
@@ -39,10 +29,9 @@
 
             var controller = (
                 $scope: IMonolithicScope,
-                $cacheFactory: ng.ICacheFactoryService,
                 $interval: ng.IIntervalService) =>
-                new MonolithicController($scope, $cacheFactory, $interval);
-            controller.$inject = ["$scope", "$cacheFactory", "$interval"];
+                new MonolithicController($scope, $interval);
+            controller.$inject = ["$scope", "$interval"];
             return controller;
         }
     }

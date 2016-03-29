@@ -5,9 +5,8 @@ var App;
         var Controllers;
         (function (Controllers) {
             var MonolithicController = (function () {
-                function MonolithicController($scope, $cacheFactory, $interval) {
+                function MonolithicController($scope, $interval) {
                     this.$scope = $scope;
-                    this.$cacheFactory = $cacheFactory;
                     this.$interval = $interval;
                     $scope.vm = $scope.vm || {
                         pageTitle: "Countdown Timer Demo"
@@ -19,10 +18,10 @@ var App;
                     }, 1000);
                 }
                 MonolithicController.factory = function () {
-                    var controller = function ($scope, $cacheFactory, $interval) {
-                        return new MonolithicController($scope, $cacheFactory, $interval);
+                    var controller = function ($scope, $interval) {
+                        return new MonolithicController($scope, $interval);
                     };
-                    controller.$inject = ["$scope", "$cacheFactory", "$interval"];
+                    controller.$inject = ["$scope", "$interval"];
                     return controller;
                 };
                 return MonolithicController;
