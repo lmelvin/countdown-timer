@@ -1,4 +1,14 @@
-﻿$primary-color: #A88E00;
+﻿$primary-color: #33C3F0;
 
-body {
+th, td {
+    text-align: center;
+    min-width: 50px;
+    cursor: pointer;
+}
+
+
+.datetimepicker .minute:hover, .datetimepicker .hour:hover, .datetimepicker .day:hover {
+    background: $primary-color;
+    color: white;
+    cursor: pointer;
 }

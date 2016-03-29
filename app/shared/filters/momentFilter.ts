@@ -1,4 +1,5 @@
-﻿/// <reference path="../app.module.ts" />
+﻿/// <reference path="../../app.module.ts" />
+
 module App.Shared.Filters {
     export function momentFormatFilter() {
         return (input, format) => {

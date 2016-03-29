@@ -1,1 +1,10 @@
-﻿
+﻿th, td {
+  text-align: center;
+  min-width: 50px;
+  cursor: pointer; }
+
+.datetimepicker .minute:hover, .datetimepicker .hour:hover, .datetimepicker .day:hover {
+  background: #33C3F0;
+  color: white;
+  cursor: pointer; }
+

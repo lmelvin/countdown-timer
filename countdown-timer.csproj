@@ -38,9 +38,10 @@
   <ItemGroup>
     <TypeScriptCompile Include="app\app.module.ts" />
     <TypeScriptCompile Include="app\components\monolithic\monolithicController.ts" />
-    <TypeScriptCompile Include="app\shared\momentFilter.ts" />
+    <TypeScriptCompile Include="app\shared\filters\momentFilter.ts" />
     <TypeScriptCompile Include="app\_references.ts" />
     <TypeScriptCompile Include="typings\angularjs\angular.d.ts" />
+    <TypeScriptCompile Include="typings\countdown\countdown.d.ts" />
     <TypeScriptCompile Include="typings\jquery\jquery.d.ts" />
     <TypeScriptCompile Include="typings\moment\moment-node.d.ts" />
     <TypeScriptCompile Include="typings\moment\moment.d.ts" />
