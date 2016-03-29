@@ -26,7 +26,6 @@
         }
 
         static factory(): Function {
-
             var controller = (
                 $scope: IMonolithicScope,
                 $interval: ng.IIntervalService) =>
