@@ -6,25 +6,12 @@ var App;
         (function (Controllers) {
             var MonolithicController = (function () {
                 function MonolithicController($scope, $interval) {
-                    var _this = this;
                     this.$scope = $scope;
                     this.$interval = $interval;
-                    this.startCountdown = function () {
-                        _this.toggleCountdownStatus();
-                    };
-                    this.reset = function () {
-                        _this.toggleCountdownStatus();
-                        _this.$scope.vm.selectedDate = null;
-                    };
-                    this.toggleCountdownStatus = function () {
-                        _this.$scope.vm.countdownStarted = !_this.$scope.vm.countdownStarted;
-                    };
                     $scope.vm = $scope.vm || {
-                        pageTitle: "Countdown Timer Demo",
-                        reset: this.reset,
-                        startCountdown: this.startCountdown
+                        pageTitle: "Countdown Timer Demo"
                     };
-                    this.interval = $interval(function () {
+                    $interval(function () {
                         if ($scope.vm.selectedDate) {
                             $scope.vm.timespan = countdown($scope.vm.selectedDate);
                         }

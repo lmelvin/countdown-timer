@@ -7,42 +7,22 @@
         pageTitle: string;
         selectedDate?: Date;
         timespan?: ITimespan;
-        startCountdown(): void;
-        reset(): void;
-        countdownStarted?: boolean;
     }
 
     export class MonolithicController {
-        private interval: ng.IPromise<any>;
-
         constructor(
-            private $scope: IMonolithicScope,
-            private $interval: ng.IIntervalService) {
+            protected $scope: IMonolithicScope,
+            protected $interval: ng.IIntervalService) {
 
             $scope.vm = $scope.vm || {
-                pageTitle: "Countdown Timer Demo",
-                reset: this.reset,
-                startCountdown: this.startCountdown
+                pageTitle: "Countdown Timer Demo"
             };
 
-            this.interval = $interval(() => {
+            $interval(() => {
                 if ($scope.vm.selectedDate) {
                     $scope.vm.timespan = countdown($scope.vm.selectedDate);
                 }
             }, 1000);
-        }
-
-        private startCountdown = (): void => {
-            this.toggleCountdownStatus();
-        }
-
-        private reset = (): void => {
-            this.toggleCountdownStatus();
-            this.$scope.vm.selectedDate = null;
-        }
-
-        private toggleCountdownStatus = (): void => {
-            this.$scope.vm.countdownStarted = !this.$scope.vm.countdownStarted;
         }
 
         static factory(): Function {
