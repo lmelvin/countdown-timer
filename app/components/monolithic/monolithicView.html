@@ -1,0 +1,39 @@
+﻿<div class="container">
+    <h1>{{ vm.pageTitle }}</h1>
+    <div class="row" ng-hide="vm.selectedDate">
+        <div class="twelve columns">
+            <datetimepicker data-ng-model="vm.selectedDate"></datetimepicker>
+        </div>
+    </div>
+    <div class="row" ng-if="vm.selectedDate">
+        <div class="twelve columns">
+            <h5>Your selected date is</h5>
+            <h3>{{ vm.selectedDate | momentformat:'LLL' }}</h3>
+        </div>
+        <div class="twelve columns">
+            <button class="button button-primary"
+                    ng-click="vm.startCountdown()"
+                    ng-disabled="vm.countdownStarted">
+                Start Countdown
+            </button>
+            <a class="button" href="" ng-click="vm.reset()">Go Back</a>
+        </div>
+    </div>
+    <div class="row" ng-if="vm.countdownStarted">
+        <div class="two columns">
+            Years: {{ vm.timespan.years }}
+        </div>
+        <div class="two columns">
+            Months: {{ vm.timespan.months }}
+        </div>
+        <div class="two columns">
+            Days: {{ vm.timespan.days }}
+        </div>
+        <div class="two columns">
+            Minutes: {{ vm.timespan.minutes }}
+        </div>
+        <div class="two columns">
+            Seconds: {{ vm.timespan.seconds }}
+        </div>
+    </div>
+</div>

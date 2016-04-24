@@ -8,3 +8,39 @@
   color: white;
   cursor: pointer; }
 
+.datetimepicker .hour, .datetimepicker .datetimepicker .minute {
+  margin: 0;
+  height: 34px;
+  line-height: 34px;
+  width: 25%; }
+
+.datetimepicker span {
+  display: block;
+  width: 23%;
+  height: 54px;
+  line-height: 54px;
+  float: left;
+  margin: 1%;
+  cursor: pointer;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px; }
+
+.datetimepicker span.sr-only.ng-binding {
+  width: 100%; }
+
+th.right {
+  padding-right: 10px;
+  text-align: right; }
+
+th.left {
+  padding-left: 10px;
+  text-align: left; }
+
+td.day.ng-binding.ng-scope.active {
+  background-color: #33C3F0;
+  color: white; }
+
+.datetimepicker thead tr:first-child th:hover, .datetimepicker tfoot tr:first-child th:hover {
+  background: #eeeeee; }
+

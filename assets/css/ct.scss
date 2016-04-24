@@ -6,8 +6,55 @@ th, td {
     cursor: pointer;
 }
 
-.datetimepicker .minute:hover, .datetimepicker .hour:hover, .datetimepicker .day:hover {
-    background: $primary-color;
+.datetimepicker {
+    .minute:hover, .hour:hover, .day:hover {
+        background: $primary-color;
+        color: white;
+        cursor: pointer;
+    }
+
+    .hour, .datetimepicker .minute {
+        margin: 0;
+        height: 34px;
+        line-height: 34px;
+        width: 25%;
+    }
+
+    span {
+        display: block;
+        width: 23%;
+        height: 54px;
+        line-height: 54px;
+        float: left;
+        margin: 1%;
+        cursor: pointer;
+        -webkit-border-radius: 4px;
+        -moz-border-radius: 4px;
+        border-radius: 4px;
+    }
+
+    span.sr-only.ng-binding {
+        width: 100%;
+    }
+}
+
+th {
+    &.right {
+        padding-right: 10px;
+        text-align: right;
+    }
+
+    &.left {
+        padding-left: 10px;
+        text-align: left;
+    }
+}
+
+td.day.ng-binding.ng-scope.active {
+    background-color: $primary-color;
     color: white;
-    cursor: pointer;
+}
+
+.datetimepicker thead tr:first-child th:hover, .datetimepicker tfoot tr:first-child th:hover {
+    background: #eeeeee;
 }
