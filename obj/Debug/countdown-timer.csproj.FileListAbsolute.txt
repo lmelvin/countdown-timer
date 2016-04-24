@@ -1,6 +1,0 @@
-D:\Projects\Git\countdown-timer\bin\countdown-timer.dll.config
-D:\Projects\Git\countdown-timer\bin\countdown-timer.dll
-D:\Projects\Git\countdown-timer\bin\countdown-timer.pdb
-D:\Projects\Git\countdown-timer\obj\Debug\countdown-timer.csprojResolveAssemblyReference.cache
-D:\Projects\Git\countdown-timer\obj\Debug\countdown-timer.dll
-D:\Projects\Git\countdown-timer\obj\Debug\countdown-timer.pdb
