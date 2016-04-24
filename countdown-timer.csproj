@@ -24,7 +24,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="app\components\monolithic\monolithicView.html" />
-    <Content Include="index.html" />
+    <Content Include="app\index.html" />
     <Content Include="assets\css\ct.css">
       <DependentUpon>ct.scss</DependentUpon>
     </Content>
